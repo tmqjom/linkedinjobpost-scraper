@@ -1,0 +1,224 @@
+<ul class="reusable-search__entity-result-list list-style-none">
+    <li class="reusable-search__result-container">
+        <div class="entity-result" data-chameleon-result-urn="urn:li:jobPosting:3648833387">
+            <div class="entity-result__item">
+                <div class="entity-result__universal-image">
+                    <div class="display-flex align-items-center">
+                        <a class="app-aware-link  scale-down " aria-hidden="true" tabindex="-1"
+                            href="https://www.linkedin.com/hiring/jobs/3648833387/detail/" data-test-app-aware-link="">
+                        </a>
+                    </div>
+                </div>
+                <div class="entity-result__content entity-result__divider pt3 pb3 t-12 t-black--light">
+                    <div class="mb1">
+                        <div class="t-roman t-sans">
+                            <div class="display-flex">
+                                <span class="entity-result__title-line entity-result__title-line--2-lines ">
+                                    <span class="entity-result__title-text
+t-16">
+                                        <a class="app-aware-link "
+                                            href="https://www.linkedin.com/hiring/jobs/3648833387/detail/"
+                                            data-test-app-aware-link="">
+                                            <strong> Administrative Assistant </strong>
+                                        </a>
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+
+    <li class="reusable-search__result-container">
+        <div class="entity-result" data-chameleon-result-urn="urn:li:jobPosting:3648833387">
+            <div class="entity-result__item">
+                <div class="entity-result__universal-image">
+                    <div class="display-flex align-items-center">
+                        <a class="app-aware-link  scale-down " aria-hidden="true" tabindex="-1"
+                            href="https://www.linkedin.com/hiring/jobs/3648833387/detail/" data-test-app-aware-link="">
+                        </a>
+                    </div>
+                </div>
+                <div class="entity-result__content entity-result__divider pt3 pb3 t-12 t-black--light">
+                    <div class="mb1">
+                        <div class="t-roman t-sans">
+                            <div class="display-flex">
+                                <span class="entity-result__title-line entity-result__title-line--2-lines ">
+                                    <span class="entity-result__title-text
+t-16">
+                                        <a class="app-aware-link "
+                                            href="https://www.linkedin.com/hiring/jobs/3648833387/detail/"
+                                            data-test-app-aware-link="">
+                                            <strong> Administrative Assistant </strong>
+                                        </a>
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+
+    <li class="reusable-search__result-container">
+        <div class="entity-result" data-chameleon-result-urn="urn:li:jobPosting:3648833387">
+            <div class="entity-result__item">
+                <div class="entity-result__universal-image">
+                    <div class="display-flex align-items-center">
+                        <a class="app-aware-link  scale-down " aria-hidden="true" tabindex="-1"
+                            href="https://www.linkedin.com/hiring/jobs/3648833387/detail/" data-test-app-aware-link="">
+                        </a>
+                    </div>
+                </div>
+                <div class="entity-result__content entity-result__divider pt3 pb3 t-12 t-black--light">
+                    <div class="mb1">
+                        <div class="t-roman t-sans">
+                            <div class="display-flex">
+                                <span class="entity-result__title-line entity-result__title-line--2-lines ">
+                                    <span class="entity-result__title-text
+t-16">
+                                        <a class="app-aware-link "
+                                            href="https://www.linkedin.com/hiring/jobs/3648833387/detail/"
+                                            data-test-app-aware-link="">
+                                            <strong> Full stack developer </strong>
+                                        </a>
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+    <!-- more <li> here -->
+</ul>
+
+
+
+// /** CLICK EACH JOB AND GET APPLICANT */
+// const link = await page.$x(`//a[contains(.//strong, "Full Stack Developer")]`);
+// // const link = await page.$x(`//a[contains(.//strong, "${item.strong}")]`);
+// if (link.length > 0) {
+// await link[0].click();
+// await page.waitForNavigation();
+
+// const currentURL = await page.url();
+// const pattern = /\/(\d+)\//;
+// const match = currentURL.match(pattern);
+
+// let jobId;
+
+// if (match) {
+// const id = match[1];
+// jobId = id;
+// } else {
+// console.log('ID not found in URL');
+// }
+// await page.waitForTimeout(1000);
+
+// const jobTitleElement = await page.$('.artdeco-entity-lockup__title h1.t-16');
+// const jobDescriptionElement = await page.$('.hiring-job-information__job-description');
+// const employmentTypeElement = await page.$('.hiring-job-information__job-details .t-14');
+
+// const jobTitle = await page.evaluate((el) => el.textContent.trim(), jobTitleElement);
+// const jobDescription = await page.evaluate((el) => el.textContent.trim(), jobDescriptionElement);
+// const employmentType = await page.evaluate((el) => el.textContent.trim(), employmentTypeElement);
+
+// const job = { _id: jobId, jobTitle, jobDescription, employmentType };
+
+// await page.waitForTimeout(2000);
+
+// const applicantsElement = await page.$('.hiring-job-info-card__metric-item span.t-24');
+// const applicantsText = await page.evaluate(element => element.textContent, applicantsElement);
+// const applicantsCount = parseInt(applicantsText);
+// const applicants = [];
+
+// if (applicantsCount === 0) {
+// await page.goto('https://www.linkedin.com/my-items/posted-jobs/?jobState=CLOSED');
+// } else {
+
+// /** GETTING APPLICANT */
+// await page.click(`button[aria-label="View applicants for Full Stack Developer job"]`);
+// // await page.click(`button[aria-label="View applicants for ${item.strong} job"]`);
+// await page.waitForNavigation();
+// await page.waitForTimeout(1000);
+
+// await page.evaluate(() => {
+// window.scrollTo(0, document.body.scrollHeight);
+// });
+
+// await page.waitForTimeout(1000);
+
+// /** CLICKING EACH NAME TO GET THE DETAILS */
+// const divElements = await page.$$('ul li div.artdeco-entity-lockup__content');
+
+// for (const element of divElements) {
+// await element.click();
+
+// let candId;
+// const currentURL = await page.url();
+// const pattern = /applicants\/(\d+)/;
+// const match = currentURL.match(pattern);
+
+// if (match) {
+// const id = match[1];
+// candId = id;
+// } else {
+// console.log('id not found in URL');
+// }
+
+// await page.locator('button ::-p-text(More…)').click();
+
+// const nameElement = await element.$('.artdeco-entity-lockup__title');
+// const name = await page.evaluate((el) => el.textContent.trim(), nameElement);
+
+// await page.waitForSelector('.artdeco-dropdown__content-inner > ul > li:nth-child(2)
+.hiring-applicant-header-actions__more-content-dropdown-item-text');
+// await page.waitForSelector('.artdeco-dropdown__content-inner > ul > li:nth-child(3)
+.hiring-applicant-header-actions__more-content-dropdown-item-text');
+
+// const emailElement = await page.$('.artdeco-dropdown__content-inner > ul > li:nth-child(2)
+.hiring-applicant-header-actions__more-content-dropdown-item-text');
+// const phoneElement = await page.$('.artdeco-dropdown__content-inner > ul > li:nth-child(3)
+.hiring-applicant-header-actions__more-content-dropdown-item-text');
+
+// const email = await page.evaluate(element => element.textContent.trim(), emailElement);
+// const phone = await page.evaluate(element => element.textContent.trim(), phoneElement);
+
+
+// applicants.push({ _id: candId, name, email, phone, jobId });
+
+// await page.waitForTimeout(2000);
+// }
+// }
+
+// axios.post('http://localhost:4000/api/job', job)
+// .then(response => {
+// console.log('Data inserted successfully:', response.data);
+// })
+// .catch(error => {
+// console.error('Error inserting data:', error);
+// });
+
+
+// if (applicants.length !== 0) {
+// console.log('Applicants:', applicants);
+// applicants.forEach(applicant => {
+// console.log(applicant);
+// axios.post('http://localhost:4000/api/candidate', applicant)
+// .then(response => {
+// console.log('Data inserted successfully:', response.data);
+// })
+// .catch(error => {
+// console.error('Error inserting data:', error);
+// });
+// });
+// }
+
+// } else {
+// console.log('Link not found');
+// }
